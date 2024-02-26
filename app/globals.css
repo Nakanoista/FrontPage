@@ -6,13 +6,33 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  
+/**/
+/*other default setting ...*/
+/**/
+  --secondary-glow: conic-gradient(
+    from 10deg at 50% 50%,
+    #e02457 0deg,
+    #a607e6 55deg,
+    #2ac766 120deg,
+    #2a64c7 160deg,
+    transparent 360deg
+  );
+
+  --third-glow: conic-gradient(
+    from 90deg at 50% 50%,
+    #dae872 0deg,
+    #e24e6b 160deg,
+    #7ed2da 120deg,
+    #59ff8b 360deg
+  );
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 38, 24, 34;
-    --background-end-rgb: 255, 115, 215;
+    --background-end-rgb: 38, 24, 34;
   }
 }
 
