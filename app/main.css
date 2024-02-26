@@ -18,7 +18,7 @@ main::before {
   filter:blur(90px);  
   top: calc(50vh - 50vw/2);
   left: calc(50vw );
-  animation: animateBefore 17s cubic-bezier(0.47, 0, 0.745, 0.715) infinite;
+  animation: animateBefore 12s cubic-bezier(0.47, 0, 0.745, 0.715) infinite;
 }
 
 main::after {
@@ -29,7 +29,7 @@ main::after {
   filter:blur(90px);
   top: calc(50vh - 50vw/2);
   left: calc(50vw - 50vw/2);
-  animation: animateAfter 24s cubic-bezier(0.47, 0, 0.745, 0.715) infinite;	
+  animation: animateAfter 18s cubic-bezier(0.47, 0, 0.745, 0.715) infinite;	
 }
 
 @keyframes animateBefore {
