@@ -36,7 +36,7 @@ export default function Home() {
               -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+          <p className={`m-0 max-w-[50ch] text-sm opacity-50`}>
             Join our discord where we will be providing updates on our projects.
           </p>
         </a>
@@ -53,7 +53,7 @@ export default function Home() {
               -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+          <p className={`m-0 max-w-[50ch] text-sm opacity-50`}>
             Project page for &quot;The Quintessential Quintuplets the Movie: Five Memories of My Time with You&quot;
           </p>
         </a>
