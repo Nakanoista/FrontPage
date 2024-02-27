@@ -1,13 +1,15 @@
 import Image from "next/image";
 import './main.css'
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-12 2xl:p-64">
 
       <div className="lg:mt-0">
+	  <Link href="?disclaimer=true">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#00000050] drop-shadow-[0_0_0.3rem_#00000050] hidden dark:block"
+          className="relative dark:drop-shadow-[0_0_0.3rem_#00000050] drop-shadow-[0_0_0.3rem_#00000050] hidden dark:block transition ease-in-out duration-500 hover:-translate-y-0.5 hover:scale-110"
           src="https://eiga.nakanoista.cc/static/nakanoista_darkbg.svg"
           alt="Nakanoista Logo"
           width={600}
@@ -15,13 +17,14 @@ export default function Home() {
           priority
         />
 		<Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#00000050] drop-shadow-[0_0_0.3rem_#00000050] dark:hidden"
+          className="relative dark:drop-shadow-[0_0_0.3rem_#00000050] drop-shadow-[0_0_0.3rem_#00000050] dark:hidden transition ease-in-out duration-500 hover:-translate-y-0.5 hover:scale-110"
           src="https://eiga.nakanoista.cc/static/nakanoista_lightbg.svg"
           alt="Nakanoista Logo"
           width={600}
           height={150}
           priority
         />
+		</Link>
       </div>
 	  
 	  <div>
