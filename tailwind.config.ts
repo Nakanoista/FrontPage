@@ -20,7 +20,7 @@ const config: Config = {
         }
       },
 	  animation: {
-        bounceright: 'bounceright 1s infinite;',
+        bounceright: 'bounceright 0.75s ease-in-out infinite;',
       },
     },
   },

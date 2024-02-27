@@ -14,11 +14,11 @@ main::before {
   border-radius: 50%;
   width: 50vw;
   height: 50vw;
-  margin-left: -200px;
   filter:blur(90px);  
+  margin-left: -200px;
   top: calc(50vh - 50vw/2);
   left: calc(50vw );
-  animation: animateBefore 12s cubic-bezier(0.47, 0, 0.745, 0.715) infinite;
+  animation: animateBefore 12s ease-in-out infinite;
 }
 
 main::after {
@@ -26,10 +26,11 @@ main::after {
   border-radius: 50%;
   width: 500px;
   height: 700px;
-  filter:blur(90px);
+  filter:blur(90px);  
   top: calc(50vh - 50vw/2);
   left: calc(50vw - 50vw/2);
-  animation: animateAfter 18s cubic-bezier(0.47, 0, 0.745, 0.715) infinite;	
+  animation: animateAfter 18s ease-in-out infinite;
+	
 }
 
 @keyframes animateBefore {
@@ -38,7 +39,6 @@ main::after {
   }
   50% {
     transform: translateY(90px) scale(0.8);
-
   }
   100% {
     transform: translateY(-90);
@@ -51,7 +51,6 @@ main::after {
   }
   50% {
     transform: translateX(-250px) scale(1.2);
-
   }
   100% {
     transform: translateX(0);
