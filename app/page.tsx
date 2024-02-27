@@ -66,7 +66,7 @@ export default function Home() {
             </span>
           </h2>
           <p className="m-0 max-w-[60ch] text-sm opacity-50 relative dark:drop-shadow-[0_0_0.3rem_#00000060] drop-shadow-[0_0_0.3rem_#ffffff60]">
-            Project page for &quot;The Quintessential Quintuplets the Movie: Five Memories of My Time with You&quot;
+            Project site for &quot;The Quintessential Quintuplets the Movie: Five Memories of My Time with You&quot;
           </p>
         </a>
       </div>
