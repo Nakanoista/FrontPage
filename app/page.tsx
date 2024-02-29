@@ -10,7 +10,7 @@ export default function Home() {
 	  <Link href="?disclaimer=true">
         <Image
           className="relative dark:drop-shadow-[0_0_0.3rem_#00000050] drop-shadow-[0_0_0.3rem_#00000050] hidden dark:block transition ease-in-out duration-500 hover:-translate-y-0.5 hover:scale-110"
-          src="/Logo_Dark.svg"
+          src="/Logo_DarkBG.svg"
           alt="Nakanoista Logo"
           width={600}
           height={150}
@@ -18,7 +18,7 @@ export default function Home() {
         />
 		<Image
           className="relative dark:drop-shadow-[0_0_0.3rem_#00000050] drop-shadow-[0_0_0.3rem_#00000050] dark:hidden transition ease-in-out duration-500 hover:-translate-y-0.5 hover:scale-110"
-          src="/Logo_Light.svg"
+          src="/Logo_LightBG.svg"
           alt="Nakanoista Logo"
           width={600}
           height={150}
