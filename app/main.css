@@ -20,7 +20,7 @@ main::before {
   margin-left: -200px;
   top: calc(50vh - 50vw/2);
   left: calc(50vw );
-  animation: animateBefore 12s ease-in-out infinite;
+  animation: animateBefore 24s ease-in-out infinite;
 }
 
 main::after {
@@ -37,13 +37,19 @@ main::after {
 
 @keyframes animateBefore {
   0% {
-    transform: translateY(-90);
+    transform: translateY(-90px) translateX(0px) rotate(0deg);
+  }
+  25% {
+	transform: rotate(90deg);
   }
   50% {
-    transform: translateY(90px) scale(0.8);
+    transform: translateY(90px) translateX(-90px) scale(0.8) rotate(180deg);
+  }
+  75% {
+	transform: rotate(270deg);
   }
   100% {
-    transform: translateY(-90);
+    transform: translateY(-90px) translateX(0px) rotate(360deg);
   }
 }
 
