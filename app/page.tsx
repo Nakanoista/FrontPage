@@ -76,7 +76,7 @@ export default function Home() {
               <AlertDialogDescription>
                 Our works are offered free of charge and without any form of
                 monetization. Nakanoista is in no way affiliated or related to
-                mages., or any parties involved in the development of any game
+                MAGES., or any parties involved in the development of any game
                 we work on.
               </AlertDialogDescription>
             </AlertDialogHeader>
