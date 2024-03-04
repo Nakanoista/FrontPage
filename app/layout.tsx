@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Modal from "../components/Modal";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Inter } from 'next/font/google'
+ 
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: "Nakanoista",
@@ -17,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}<Modal/></body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
