@@ -46,7 +46,7 @@ export default function Home() {
                         priority
                       />
                       <Image
-                        className="relative dark:drop-shadow-[0_0_0.3rem_#00000050] drop-shadow-[0_0_0.3rem_#00000050] dark:hidden transition ease-in-out duration-500 hover:-translate-y-0.5 hover:scale-110"
+                        className="relative dark:drop-shadow-[0_0_0.3rem_#00000050] drop-shadow-[0_0_0.3rem_#00000030] dark:hidden transition ease-in-out duration-500 hover:-translate-y-0.5 hover:scale-110"
                         src="/Logo_LightBk.svg"
                         alt="Nakanoista Logo"
                         width={600}
@@ -64,15 +64,15 @@ export default function Home() {
           </AlertDialogTrigger>
           <AlertDialogContent>
             <AlertDialogHeader>
-              <AlertDialogTitle><svg
-                className="inline-block dark:invert"
+              <AlertDialogTitle className="inline-grid grid-rows-2 justify-items-center"><svg
+                className="invert"
                 xmlns="http://www.w3.org/2000/svg"
                 height="2em"
-                viewBox="0 0 100 110"
+                viewBox="0 0 100 130"
               >
-                <path d="M83.5,83.5C102,65,102,35,83.5,16.5C65-2,35-2,16.5,16.5C-2,35-2,65,16.5,83.5C35,102,65,102,83.5,83.5z M44.7,27.1  c1.2-2.6,4-4,6.8-3.3c2.7,0.7,4.5,3.3,4.3,6.2c-0.1,1.9-0.2,3.7-0.3,5.6c-0.4,7-0.8,14-1.1,20.9c-0.1,2.3-2,4.1-4.3,4.1  c-2.4,0-4.2-1.8-4.3-4.3c-0.1-1.4-0.1-2.8-0.2-4.2c-0.3-4.5-0.5-9-0.8-13.6c-0.2-2.9-0.3-5.8-0.5-8.7C44.2,29,44.3,28,44.7,27.1z   M50,64.7c3.2,0,5.8,2.6,5.9,5.8c0,3.2-2.6,5.8-5.8,5.8c-3.1,0-5.8-2.6-5.8-5.7C44.2,67.4,46.8,64.7,50,64.7z"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M54.25,29.25v26.8500977h-8.6494141V29.25H54.25z M95,5v90H5V5H95z   M87.6503906,87.6503906v-75.300293H12.3505859v75.300293H87.6503906z M54.3505859,62.050293V70.75h-8.7001953v-8.699707H54.3505859  z"/>
 
-              </svg>&nbsp;&nbsp;Disclaimer</AlertDialogTitle>
+              </svg>Disclaimer</AlertDialogTitle>
               <AlertDialogDescription>
                 Our works are offered free of charge and without any form of
                 monetization. Nakanoista is in no way affiliated or related to
