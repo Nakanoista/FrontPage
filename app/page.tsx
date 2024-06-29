@@ -175,7 +175,7 @@ export default function Home() {
               rel="noopener noreferrer"
               >
                 <p className="my-2 text-center text-lg lg:text-xl italic text-slate-200 dark:drop-shadow-[0_0_0.3rem_#00000060] drop-shadow-[0_0_0.3rem_#ffffff60]">
-                  Where's the patch for Gotopazu (VN1)? <span className="inline-block transition-transform group-hover:animate-bounceright motion-reduce:transform-none">
+                  Where is the patch for Gotopazu (VN1)? <span className="inline-block transition-transform group-hover:animate-bounceright motion-reduce:transform-none">
                   -&gt;
                 </span>
                 </p>
