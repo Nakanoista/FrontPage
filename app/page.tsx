@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import "./main.css";
 import Link from "next/link";
@@ -20,8 +21,41 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
+import React, { useState, useEffect } from 'react';
+
+const disclaimerText = `
+  Our works are offered free of charge and without any form of
+  monetization. Nakanoista is in no way affiliated or related 
+  to MAGES., Spike Chunsoft, or any parties involved in the
+  development of any game we work on. 
+  All of our works require a copy of the game in question 
+  legally owned (and personally dumped, if necessary). <br/><br/>
+  <strong>We DO NOT redistribute copies of any game on our 
+  platforms.</strong>
+`;
+
+const colors = ['bg-red-500', 'bg-green-500', 'bg-blue-500', 'bg-yellow-500', 'bg-purple-500'];
+
+const getRandomColor = () => {
+  return colors[Math.floor(Math.random() * colors.length)];
+};
 
 export default function Home() {
+
+  const [buttonColor, setButtonColor] = useState('bg-black/50');
+
+  useEffect(() => {
+    setButtonColor('bg-black/50');
+  }, []);
+
+  const handleMouseEnter = () => {
+    setButtonColor(getRandomColor());
+  };
+
+  const handleMouseLeave = () => {
+    setButtonColor('bg-black/50');
+  };
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-12 2xl:p-64">
       <ThemeProvider
@@ -30,67 +64,26 @@ export default function Home() {
         enableSystem
         disableTransitionOnChange
       >
-        <AlertDialog>
-          <AlertDialogTrigger>
-            <div className="lg:mt-0">
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <div>
-                      <Image
-                        className="relative dark:drop-shadow-[0_0_0.3rem_#00000050] drop-shadow-[0_0_0.3rem_#00000050] hidden dark:block transition ease-in-out duration-500 hover:-translate-y-0.5 hover:scale-110"
-                        src="/Logo_DarkBk.svg"
-                        alt="Nakanoista Logo"
-                        width={600}
-                        height={150}
-                        priority
-                      />
-                      <Image
-                        className="relative dark:drop-shadow-[0_0_0.3rem_#00000050] drop-shadow-[0_0_0.3rem_#00000030] dark:hidden transition ease-in-out duration-500 hover:-translate-y-0.5 hover:scale-110"
-                        src="/Logo_LightBk.svg"
-                        alt="Nakanoista Logo"
-                        width={600}
-                        height={150}
-                        priority
-                      />
-                    </div>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>See Copyright Disclaimer</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            </div>
-          </AlertDialogTrigger>
-          <AlertDialogContent>
-            <AlertDialogHeader>
-              <AlertDialogTitle className="inline-grid grid-rows-2 justify-items-center"><svg
-                className="invert"
-                xmlns="http://www.w3.org/2000/svg"
-                height="2em"
-                viewBox="0 0 100 130"
-              >
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M54.25,29.25v26.8500977h-8.6494141V29.25H54.25z M95,5v90H5V5H95z   M87.6503906,87.6503906v-75.300293H12.3505859v75.300293H87.6503906z M54.3505859,62.050293V70.75h-8.7001953v-8.699707H54.3505859  z"/>
 
-              </svg>Disclaimer</AlertDialogTitle>
-              <AlertDialogDescription>
-
-                Our works are offered free of charge and without any form of
-                monetization. Nakanoista is in no way affiliated or related 
-                to MAGES., Spike Chunsoft, or any parties involved in the
-                development of any game we work on. 
-                All of our works require a copy of the game in question 
-                legally owned (and personally dumped, if necessary). <br/><br/>
-                <strong>We DO NOT redistribute copies of any game on our 
-                platforms.</strong>
-
-              </AlertDialogDescription>
-            </AlertDialogHeader>
-            <AlertDialogFooter>
-              <AlertDialogCancel>Close</AlertDialogCancel>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialog>
+        
+      <div>
+        <Image
+            className="relative dark:drop-shadow-[0_0_0.3rem_#00000050] drop-shadow-[0_0_0.3rem_#00000050] hidden dark:block"
+            src="/Logo_DarkBk.svg"
+            alt="Nakanoista Logo"
+            width={600}
+            height={150}
+            priority
+            />
+        <Image
+            className="relative dark:drop-shadow-[0_0_0.3rem_#00000050] drop-shadow-[0_0_0.3rem_#00000030] dark:hidden"
+            src="/Logo_LightBk.svg"
+            alt="Nakanoista Logo"
+            width={600}
+            height={150}
+            priority
+            />
+      </div>
 
         <div>
           <p className="my-12 text-center text-lg lg:text-xl font-bold dark:drop-shadow-[0_0_0.3rem_#00000060] drop-shadow-[0_0_0.3rem_#ffffff60]">
@@ -174,7 +167,7 @@ export default function Home() {
               className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-white hover:dark:bg-neutral-800/30"
               rel="noopener noreferrer"
               >
-                <p className="my-2 text-center text-lg lg:text-xl italic text-slate-200 dark:drop-shadow-[0_0_0.3rem_#00000060] drop-shadow-[0_0_0.3rem_#ffffff60]">
+                <p className="my-2 text-center text-lg lg:text-xl italic text-black dark:text-slate-200 dark:drop-shadow-[0_0_0.3rem_#00000060] drop-shadow-[0_0_0.3rem_#ffffff60]">
                   Where&apos;s the patch for Gotopazu (VN1)? <span className="inline-block transition-transform group-hover:animate-bounceright motion-reduce:transform-none">
                   -&gt;
                 </span>
@@ -220,6 +213,45 @@ export default function Home() {
           </AlertDialog>
 
       </ThemeProvider>
+      
+      <AlertDialog>
+          <AlertDialogTrigger>
+            <div className="lg:mt-0">
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <button
+                      className={`fixed bottom-4 left-4 ${buttonColor} text-white p-3 rounded-full shadow-lg transition-colors duration-500`}
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}>                 
+                      <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                      </svg>
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>See Copyright Disclaimer</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </div>
+          </AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle className="inline-grid grid-rows-2 justify-items-center"><svg
+                className="invert"
+                xmlns="http://www.w3.org/2000/svg"
+                height="2em"
+                viewBox="0 0 100 130">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M54.25,29.25v26.8500977h-8.6494141V29.25H54.25z M95,5v90H5V5H95z   M87.6503906,87.6503906v-75.300293H12.3505859v75.300293H87.6503906z M54.3505859,62.050293V70.75h-8.7001953v-8.699707H54.3505859  z"/>
+              </svg>Disclaimer</AlertDialogTitle>
+              <AlertDialogDescription dangerouslySetInnerHTML={{ __html: disclaimerText }} />
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>Close</AlertDialogCancel>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
     </main>
   );
 }
